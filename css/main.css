@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    text-align: center;
+    background: white;
+}
+canvas {
+    border: 1px solid grey;
+    height: 85%;
+    max-width: 100%;
+    background-image: url(../imgs/bg2.jpg);
+    background-size: auto 100%;
+    margin-top: 20px;
+}
+.header {
+    display: inline-block;
+    background-color: black;
+    width: 100%;
+}
+.navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
+    background-color: black;
+    color: #2cbeed;
+}
+.navbar-nav .active a {
+    background-color: black;
+    color: #2cbeed;
+}
+.rank-list {
+    margin: 20px;
+}
+.about-us {
+    margin-bottom: 20px;
+}
