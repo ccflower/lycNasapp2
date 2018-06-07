@@ -17,10 +17,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">高考加油墙 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">首页 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rank.html">星云碰记录</a>
+                        <a class="nav-link" href="rank.html">星云同学录</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://nebulas.io/">关于星云链</a>
@@ -33,16 +33,91 @@
         </nav>
     </div>
     <div class="main-content">
-        <canvas id="el">
-        </canvas>
+        <div class="description">
+            <p>十年前，高考毕业。十年辗转，往事如云烟。
+            </p>
+            <p>
+                那年在书桌下偷偷写过的同学录，都去了哪里？
+            </p>
+            <p>
+                那年毕业时的惆怅，是否因为预见了未来，音容笑貌都会模糊？
+            </p>
+            <p>
+                而我曾经为你留下的记录，能否真的成为永恒？如果在十八岁遇到星云同学录，你会写下些什么呢…
+            </p>
+        </div>
+        <div class="content-rows">
+            <div class="one-line">
+                <div class="left">
+                    <label>昵称：</label>
+                    <input class="form-control">
+                </div>
+                <div class="right">
+                    <label>爱好：</label>
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="left">
+                    <label>生日：</label>
+                    <input class="form-control">
+                </div>
+                <div class="right">
+                    <label>星座：</label>
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="left">
+                    <label>口头禅：</label>
+                    <input class="form-control">
+                </div>
+                <div class="right">
+                    <label>喜欢的歌/歌手：</label>
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="left">
+                    <label>QQ号：</label>
+                    <input class="form-control">
+                </div>
+                <div class="right">
+                    <label>微信ID：</label>
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="left">
+                    <label>理想的大学：</label>
+                    <input class="form-control">
+                </div>
+                <div class="right">
+                    <label>高中最开心的事情：</label>
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="more-words">
+                <label class="label">想对他/她说的话：</label>
+                <div class="wrapper-1">
+                    <div class="wrapper-2">
+                        <textarea class="textarea" placeholder="醉笑陪君三千场，不诉离殇..."></textarea>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="send">
+                <label>Ta的钱包地址：</label>
+                <input class="form-control">
+                <button class="btn btn-primary">发送</button>
+            </div>
+        </div>
     </div>    
 
     <script type="text/javascript" src="./dist/nebulas.js"></script>
     <script type="text/javascript" src="./dist/nebPay.js"></script>
-    <script src="./build/easycanvas.standalone.prod.js"></script>
-    <script src="./build/plugin.physics.standalone.prod.js"></script>
     <script src="libs/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
     <script src="libs/bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
-    <script src="js/game.js"></script>
+    <script src="js/index.js"></script>
 </body>
