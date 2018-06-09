@@ -23,7 +23,7 @@
     triggerSelector: "> li a",
     cardFlyDirection: "all",
     closeButton: "X",
-    flipButton: "Flip",
+    flipButton: "翻页",
     navigation: true,
     beforeOpen: null,
     afterOpen: null

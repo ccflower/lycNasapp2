@@ -148,3 +148,43 @@ canvas {
     margin-top: 60px;
     background: url('../imgs/mybook_loading.gif') 50% 50% no-repeat rgb(255,255,255);
 }
+.main-content-section .tc_body .tc_card .tc_inner_card {
+    padding: 10px;
+    text-align: center;
+}
+.main-content-section .tc_body .tc_card .tc_inner_card .tc_click_target {
+    padding: 20px;
+    font-style: italic;
+    color: #2d74da;
+}
+.main-content-section .tc_body .tc_card .tc_inner_card .author{
+    word-break: break-all;
+    font-size: 15px;
+    color: #888;
+ }
+ .tc_inner_modal .tc_front label {
+    display: block;
+    color: #888;
+    text-align: left;
+    padding-left: 60px;
+    border-bottom: 1px solid grey;
+ }
+ .tc_inner_modal .tc_back label {
+    display: block;
+    color: #888;
+    text-align: left;
+    font-size: 20px;
+ }
+ .tc_inner_modal .tc_back .msg {
+    display: block;
+    color: #888;
+    text-align: left;
+    font-size: 16px;
+    padding: 20px;
+ }
+ .tc_inner_modal .tc_back {
+    border: 1px solid grey;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 10px;
+ }
