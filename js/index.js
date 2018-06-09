@@ -9,40 +9,32 @@ $(function() {
 	
 	NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 	nebPay = new NebPay();
-	
-	function getAllPlayerInfo(){
-		var from = dappContactAddress;
+    
+    function addANewTongxuelu(name,koutouchan,qq,school,hobby,xingzhuo,singer,wechat,happything,msg,toAddr){
+        var to = dappContactAddress;
         var value = "0";
-        var nonce = "0";
-        var gas_price = "1000000";
-        var gas_limit = "20000000";
-        var callFunction = "getAllPlayerInfo";
-        var callArgs = "";
-        //console.log("callFunction:" + callFunction + " callArgs:" + callArgs);
-        var contract = {
-            "function": callFunction,
-            "args": callArgs
-        };
-        neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
-            var result = resp.result;   
-        
-            result = JSON.parse(result);
-            console.log(result);
-            var html = "";
-			var itemList = result;
-			console.log(itemList);
-            for(var i = 0, iLen = itemList.length; i < iLen; i++) {
-                html += '<li>' +
-				'<p class="item-content"><font color="white">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '</font></p>' +
-						'</li>';
-						console.log(html);
-            }
-            $('#itemList').append(html);
-        }).catch(function (err) {
-            console.log("error :" + err.message);
-        })
-	}
+        var callFunction = "addANewTongxuelu";
+        var callArgs = "[\"" + name + "\",\"" + koutouchan + "\",\"" + qq + "\",\"" + school + "\",\"" + hobby +"\",\"" + xingzhuo + "\",\"" + singer +"\",\"" + wechat + "\",\"" + happything +"\",\"" + msg + "\",\"" + toAddr + "\"]";
+        console.log(callArgs);
+        serialNumber = nebPay.call(to, value, callFunction, callArgs, { 
+                listener: function (resp) {
+                    try{
+                        if(resp.indexOf("Transaction rejected by user") > 0){
+                            alert("您拒绝了合约调用，请重试");
+                        }
+                    }catch(e){
+                        var hash = resp.txhash;
+                        regetTransactionReceipt(hash, function (status) {
+                            if(status == 1){
+                                alert('添加成功！');
+                            }else{
+                                alert('添加失败，请重新提交！');
+                            }
+                        })
+                    }
+                        //upadte card status into in progress...
+                }
+            }); 
+        }
 
-    
-    
 });
