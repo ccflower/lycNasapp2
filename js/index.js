@@ -3,7 +3,7 @@ $(function() {
 	var NebPay
 	var nebPay
 	var nebulas
-	dappContactAddress = "n1zDMur9vjYRrF2VbprTc4Rb16ohnxgZPd7";
+	dappContactAddress = "n1ia6R6YZvDUNPwZMsSJwUrm8jQyuhFEUWe";
 	nebulas = require("nebulas"), neb = new nebulas.Neb();
 	neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 	
@@ -55,5 +55,29 @@ $(function() {
         console.log(parameter);
         addANewTongxuelu(parameter.name,parameter.koutouchan,parameter.qq,parameter.school,parameter.hobby,parameter.xingzhuo,parameter.singer,parameter.wechat,parameter.happything,parameter.msg,parameter.toAddr,parameter.birthday);
     });
+
+        function regetTransactionReceipt(hash, cb) {
+            var task = setInterval(function () {
+                getTransactionReceipt(hash, function (resp) {
+    //                console.log(resp)
+                    var status = resp.result.status;
+                    console.log('status:' +status)
+                    if(status == 1 || status == 0){
+                        clearInterval(task);
+                        cb(status);
+                    }
+                })
+            }, 1000);
+        }
+    
+        function getTransactionReceipt(hash, cb){
+            $.post('https://mainnet.nebulas.io/v1/user/getTransactionReceipt', JSON.stringify({
+                "hash": hash
+            }), function (resp) {
+                console.log(resp);
+                cb(resp)
+            })
+        }
+    
 
 });

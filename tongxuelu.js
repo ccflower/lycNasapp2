@@ -25,6 +25,7 @@ var TongXueLuItem = function(text){
        this.happything = obj.happything; //最开心的一件事
        this.msg = obj.msg; //想对他说的话
        this.toAddr = obj.toAddr; //对方的钱包地址
+       this.brithday = obj.brithday;
     }
 };
 
@@ -39,7 +40,7 @@ TongXueLuItems.prototype ={
         this.size = 0
     },
 
-    addANewTongxuelu:function(name,koutouchan,qq,school,hobby,xingzhuo,singer,wechat,happything,msg,toAddr){
+    addANewTongxuelu:function(name,koutouchan,qq,school,hobby,xingzhuo,singer,wechat,happything,msg,toAddr,brithday){
         var from = Blockchain.transaction.from;
 
         var id = this.size;
@@ -58,6 +59,7 @@ TongXueLuItems.prototype ={
             TongXueLu.happything = happything;
             TongXueLu.msg = msg;
             TongXueLu.toAddr = toAddr;
+            TongXueLu.brithday = brithday;
             this.size += 1
             LocalContractStorage.set("size", this.size);
         }

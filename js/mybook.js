@@ -4,7 +4,7 @@ $(function () {
     var NebPay;
     var nebPay;
     var nebulas;
-    dappContactAddress = "n1zDMur9vjYRrF2VbprTc4Rb16ohnxgZPd7";
+    dappContactAddress = "n1ia6R6YZvDUNPwZMsSJwUrm8jQyuhFEUWe";
     nebulas = require("nebulas"), neb = new nebulas.Neb();
     neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
     
