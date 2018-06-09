@@ -12,17 +12,43 @@ canvas {
     margin-top: 20px;
 }
 .header {
-    display: inline-block;
-    background-color: black;
-    width: 100%;
+    height: 60px;
+    line-height: 30px;
+    padding-left: 20px;
+    color: white;
+    background: #409eff;
+    padding: 0
+}
+.header .navbar a img {
+    width: 230px;
+}
+.header .navbar {
+    padding: 0;
+}
+.navbar .navbar-nav {
+    padding-top: 5px;
+}
+.navbar-nav>li>a {
+    color: white;
 }
 .navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
-    background-color: black;
-    color: #2cbeed;
+    color: white;
 }
 .navbar-nav .active a {
-    background-color: black;
-    color: #2cbeed;
+    color: white;
+}
+.xingyun-icon {
+    width: 60px !important;
+    padding-left: 20px;
+    margin-right: -25px;
+}
+.main-content-section {
+    padding-top: 60px;
+}
+.qingchun-author {
+    text-align: right;
+    padding-left: 600px;
+    display: inline-block;
 }
 .rank-list {
     margin: 20px;
