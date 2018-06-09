@@ -3,6 +3,16 @@ body {
     text-align: center;
     background: white;
 }
+#navbarNavDropdown {
+    height: 60px;
+}
+#navbarNavDropdown .navbar-nav {
+    height: 60px;
+    line-height: 45px;
+}
+#navbarNavDropdown .navbar-nav .nav-item.active {
+    background-color: #2d74da;
+}
 canvas {
     /* border: 1px solid grey; */
     height: 85%;
@@ -24,9 +34,6 @@ canvas {
 }
 .header .navbar {
     padding: 0;
-}
-.navbar .navbar-nav {
-    padding-top: 5px;
 }
 .navbar-nav>li>a {
     color: white;
