@@ -146,5 +146,5 @@ canvas {
     height: 100%;
     z-index: 9999;
     margin-top: 60px;
-    background: url('../imgs/mybook_loading.gif') 50% 50% no-repeat rgb(30,145,243);
+    background: url('../imgs/mybook_loading.gif') 50% 50% no-repeat rgb(255,255,255);
 }
