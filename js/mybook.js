@@ -81,7 +81,7 @@ $(function () {
                 '</div>' +
                 '<div class="tc_back"><p></p>' +
                 '</div>' +
-                '<div id="tip1" class="tip">' +
+                '<div id="tip'+ num +'" class="tip">' +
                     '<div class="tc_front">' +
                         ' <label>昵称：'+ item.name +'</label>' +
                         ' <label>爱好：'+ item.hobby +'</label>' +
